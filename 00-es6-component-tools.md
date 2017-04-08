@@ -150,3 +150,49 @@ import whoami from './main.js';
 whiami();
 
 ```
+
+8. Babel(把最新的javascript代码编译成当前可执行的javascript代码)
+```
+// install Babel CLL
+npm install babel-cli -g
+
+// config plugin or presets
+touch .babelrc
+{
+  "presets": [],
+  "plugins": []
+}
+
+// install plugins or presets
+npm install babel-preset-es2015 --save-dev
+npm install babel-plugin-transform-object-rest-spread --save-dev
+
+// add plugins or presets to .bablerc
+{
+  "presets": ['es2015'],
+  "plugins": ['transform-object-rest-spread']
+}
+
+// develoe with es6/7
+let numbers = [1, 2, 3];
+let doubleNumbers = number.map((number) => number * 2);
+let mike = {name: 'mike', age: 40};
+mike = { ...mike, sex: 'male'};
+console.log(mike);
+
+// compile js
+babel es7.js -o compile.js
+'use strict';
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var numbers = [1, 2, 3];
+var doubleNumbers = numbers.map(function (number) {
+  return number * 2;
+});
+// console.log(doubleNumbers);
+
+var mike = { name: 'mike', age: 10 };
+mike = _extends({}, mike, { sex: 'male' });
+console.log(mikes);
+```

@@ -49,8 +49,8 @@ module.exports = {
 				include: APP_PATH
 			},
 			{
-				test: /\.css$/,
-				use: ['style-loader', 'css-loaser?modules']
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader?modules', 'sass-loader']
 			}
 		]
 	},

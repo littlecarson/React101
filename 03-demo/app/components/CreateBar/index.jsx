@@ -3,7 +3,7 @@
  */
 
 // 1. 加载依赖
-// import './style.scss';
+import './style.scss';
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
@@ -15,7 +15,7 @@ const propTypes = {
 // 3. 定义组件 : 无状态组件
 function CreateBar({ onClick }) {
   return (
-    <a href="#" onClick={onClick} className="list-group-item create-bar-component">
+    <a href="#" onClick={() => {onClick();}} className="list-group-item create-bar-component">
       + 创建新的文档
     </a>
   );

@@ -10,6 +10,7 @@ import ListItem from '../ListItem';
 // 2. 定义属性验证
 const propTypes = {
 	items: PropTypes.array.isRequired,
+	onSelect: PropTypes.func.isRequired,
 };
 
 // 3. 定义组件 : 无状态组件
@@ -17,7 +18,7 @@ function ItemList({items}) {
 
 	items = items.map(
 		item => (
-			<listItem item={item} key={item.id} />
+			<ListItem item={item} key={item.id} onClick={() => onSelect(item.id)}/>
 		)
 	);
 

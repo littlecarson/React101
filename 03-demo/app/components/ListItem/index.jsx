@@ -15,11 +15,11 @@ const propTypes = {
 // 3. 定义组件 : 无状态组件
 function ListItem({item}) {
 	return (
-		<a href="#" className="list-group-item item-component">
+		<a href="#" className="list-group-item item-component" onClick={onClick}>
 			<span className="label label-default label-pill pull-xs-right">
 				{item.time}
 			</span>
-			{item.title}
+			<span className="item-title">{item.title}</span>
 		</a>
 	);
 }
